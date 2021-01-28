@@ -1,15 +1,6 @@
 <div class="canvas graph">
-  <div class="conditions" (sendCreateNodeMessage)="addNode($event)">
-    <div class="node">
-      <p class="tag">Location <strong>London</strong></p>
-      <p class="tag">Duration <strong>3:25</strong></p>
-      <p class="actions">
-        <button class="icon-plus" type="button" (click)="addNode($event)">
-          Add new node
-        </button>
-      </p>
-    </div>
-    <template #conditions></template>
+  <div class="conditions">
+    <app-c-node [node]="node" [deletable]="false"></app-c-node>
   </div>
   <div class="options">
   </div>

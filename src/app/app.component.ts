@@ -1,14 +1,16 @@
 import {
   Component,
-  OnInit,
-  Input,
-  HostListener,
-  ElementRef,
-  ViewChild,
-  ViewContainerRef,
-  ComponentFactoryResolver} from '@angular/core';
+  } from '@angular/core';
 
-import {CNodeComponent} from "./c-node/c-node.component"
+
+export interface Node {
+  key: string;
+
+  property: string;
+  value: string;
+
+  children: Node[];
+}
 
 @Component({
   selector: 'app-root',
@@ -17,21 +19,16 @@ import {CNodeComponent} from "./c-node/c-node.component"
 })
 export class AppComponent {
   title = 'sandbox';
+  rootNode: Node = {
+    key: '1',
+    property: 'location',
+    value: 'london',
+    children: []
+  };
 
-  constructor(
-    private el: ElementRef,
-    private resolver: ComponentFactoryResolver) { }
-
-  @ViewChild('conditions', {read: ViewContainerRef, static: true}) conditions: ViewContainerRef;
-  @Input() sendCreateNodeMessage: boolean;
-
-  schemeData = [];
-
-  componentRef: any;
-
-  addNode(event: any) {console.log(event)
-    const factory = this.resolver.resolveComponentFactory(CNodeComponent);
-    this.componentRef = this.conditions.createComponent(factory);
+  get node() {
+    console.log(this.rootNode);
+    return this.rootNode;
   }
 
 }

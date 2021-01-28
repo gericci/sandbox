@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConditionsComponent } from './conditions/conditions.component';
 import { CNodeComponent } from './c-node/c-node.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CNodeComponent } from './c-node/c-node.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   entryComponents: [ CNodeComponent ],
   providers: [],
