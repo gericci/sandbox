@@ -1,0 +1,39 @@
+div.node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  text-align: center;
+  background: rgba(255,255,255,0.7)
+}
+
+div.node::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 35px;
+  top: 31px;
+  left: calc(50% - 18px);
+  background-color: var(--and);
+  border-radius: 35px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+
+p.actions {
+  order: 1;
+  width: 66px;
+}
+
+p.tag {
+  order: 2;
+  display: block;
+  font-size: 0.75em;
+  margin-top: 44px;
+}
+  p.tag strong {font-size: 95%;}
+
+.icon-plus, .icon-less {
+  transform: scale(0.5);
+}

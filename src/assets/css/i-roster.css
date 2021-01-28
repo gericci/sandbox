@@ -1,0 +1,176 @@
+/* --------------------------------------------------------------------
+               			INTEGRALE
+               	Integrale ROSTER styles only
+
+						     Le Studio Worldline, 2020
+-------------------------------------------------------------------- */
+
+#roster-body {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0 2rem 0 1rem;
+}
+
+div.wrap-details {
+  display: flex;
+  height: 100%;
+}
+
+.roster div.tabsContainer .content[aria-hidden='false'] {
+  height: 100%;
+  padding: 0;
+}
+
+table.data-table caption {padding: 0 0 1rem;}
+table.data-table caption::before {
+	display: block;
+	position: relative;
+	content: "";
+	width: 100%;
+	height: 0.35em;
+	top: 0.9em;
+	background-color: var(--caption-rule);
+	z-index: 1;
+}
+
+	table.data-table caption span {
+		position: relative;
+		background-color: var(--body-bg);
+		padding-right: 1rem;
+		z-index: 2;
+	}
+	table.data-table caption svg {
+		position: relative;
+		top: 0.2em;
+	}
+
+table.data-table th, table.data-table td {padding: 0.25rem 0.5rem;}
+
+table.data-table th {border: none;}
+table.data-table td {border-bottom: 1px solid var(--n-medium);}
+
+/* EXCEPTIONS /FIXES */
+
+#details-panel div.tabsContainer div.content {
+	box-sizing: border-box;
+	overflow-y: auto;
+	width: calc(100% - 1rem);
+	height: calc(100% - 12rem);
+	padding-right: 1rem;
+}
+
+	#details-panel header.actions-header {padding: 0.25rem 1rem;}
+		#details-panel header.actions-header h3 {font: normal 1em/1 var(--stack);}
+			#details-panel header.actions-header strong {
+				display: block;
+				font-size: 80%;
+			}
+
+	#details-panel [role=tabpanel] {
+		background-color: rgba(255,255,255,0);
+		margin: 1rem;
+	}
+
+	#details-panel ul[role=tablist] {
+	  margin: 1px 0 1rem 0.5rem;
+	}
+
+		#details-panel ul[role=tablist] li {
+		  font-size: 0.8em;
+		}
+
+		#details-panel ul[role=tablist] button {
+		  padding: 0.45em 0.8rem 0.25rem;
+		}
+
+	#details-panel > div.content {
+		display: flex;
+		flex-direction: column;
+		padding: 0 1rem 1rem;
+	}
+	#details-panel[aria-hidden=true] > div.content {
+		display: none;
+	}
+
+	#details-panel div.empty-state {
+		background-image: var(--gradient);
+	}
+
+div.info-block p, div.info-block li, div.info-block dt, div.info-block dd {
+  font-size: 0.85em;
+}
+div.info-block div.content p, div.info-block div.content dd {
+  color: var(--text-var);
+}
+
+/* Last opened rosters */
+
+div.last-opened {
+	background-color: var(--main-light);
+	padding: 0.5rem;
+}
+
+#explorer div.last-opened h3 {
+	font-size: 0.85em;
+	font-weight: bold;
+	margin: 0;
+}
+
+#explorer div.division {margin-bottom: 1rem;}
+
+div.last-opened ul li {
+	list-style-type: none;
+	font-size: 0.8em;
+}
+div.last-opened ul li::before {
+	display: inline-block;
+	content: "";
+	width: 1.6em;
+	height: 1.8em;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='16.54' viewBox='0 0 19 16.54'%3E%3Crect width='19' height='2.23' style='fill:%23406a93'/%3E%3Cpath d='M1.4,3.47V16.54H17.6V3.47Zm7,10.73H4.93V5.57H8.39Zm5.68,0H10.61V5.57h3.46Z' style='fill:%23406a93'/%3E%3C/svg%3E");
+  background-position: 0 6px;
+  background-size: 17px 19px;
+}
+
+/* Departure, arrival, total */
+dl.times {
+	display: flex;
+	justify-content: space-between;
+}
+	dl.times div {display: flex; align-items: center;}
+	dl.times dd {font-size: 0.75em; padding: 0 0.5rem;}
+	dl.times svg {fill: var(--main-color);}
+
+/* List of available crew */
+
+div.crew-list li {
+	font-size: 0.85em;
+	background-repeat: no-repeat;
+	background-color: var(--body-bg);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z' style='fill: %23406A93' /%3E%3C/svg%3E");
+	background-position: 0.5rem 0.4rem;
+	padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+	margin-bottom: 1rem;
+}
+
+	div.crew-list li dt, div.crew-list li dd {
+		font-size: 90%;
+	}
+
+	div.crew-list dl div {
+		display: flex;
+		justify-content: space-between;
+	}
+	div.crew-list dd {
+		color: var(--text-var);
+		background-color: var(--body-bg);
+	}
+
+	div.crew-list strong {
+		display: block;
+		background-image: var(--gradient);
+		margin-bottom: 0.3em;
+	}
