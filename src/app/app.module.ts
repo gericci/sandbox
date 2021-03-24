@@ -3,23 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ConditionsComponent } from './conditions/conditions.component';
-import { CNodeComponent } from './c-node/c-node.component';
-import {FormsModule} from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
+import { ComponentsPageComponent } from './components-page/components-page.component';
+import { ModalComponent } from './modal/modal.component';
+import { ModalButtonComponent } from './modal/modal-button/modal-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConditionsComponent,
-    CNodeComponent
+    HeaderComponent,
+    DashboardPageComponent,
+    ComponentsPageComponent,
+    ModalComponent,
+    ModalButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
   ],
-  entryComponents: [ CNodeComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

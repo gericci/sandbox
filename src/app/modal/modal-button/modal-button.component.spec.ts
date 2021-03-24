@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CNodeComponent } from './c-node.component';
+import { ModalButtonComponent } from './modal-button.component';
 
-describe('CNodeComponent', () => {
-  let component: CNodeComponent;
-  let fixture: ComponentFixture<CNodeComponent>;
+describe('ModalButtonComponent', () => {
+  let component: ModalButtonComponent;
+  let fixture: ComponentFixture<ModalButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CNodeComponent ]
+      declarations: [ ModalButtonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CNodeComponent);
+    fixture = TestBed.createComponent(ModalButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

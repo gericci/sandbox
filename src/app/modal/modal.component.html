@@ -1,0 +1,12 @@
+<div class="modal" role="dialog" aria-modal="true" #dialogElement [attr.aria-hidden]="!isOpen">
+  <div class="overlay" (click)="ToggleOpen()"></div>
+  <div class="modal-body" (keyup)="onKey($event)">
+    <h2 class="modal-title" [id]="dialogTitle" tabindex="0" #focusable>
+      {{ modalTitle }}
+    </h2>
+    <p><button class="modal-close" (click)="ToggleOpen()">Close</button></p>
+    <div class="content" [id]="dialogDescription">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

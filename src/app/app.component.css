@@ -1,3 +1,11 @@
+@keyframes shine {
+  0% {background-color: rgba(255,255,255,0.3)}
+  50% {background-color: rgba(255, 153, 0, 1)}
+  100% {background-color: rgba(255,255,255,0.3)}
+}
+
+.shine {animation: 0.5s linear shine;}
+
 div.canvas {
   display: flex;
   justify-content: space-between;
@@ -11,11 +19,16 @@ div.conditions {
 	padding: 1rem;
 	border: 1px solid var(--n-medium);
 }
+
 div.options {
 	flex-basis: 24%;
-	height: 50vh;
 	background-image: var(--gradient);
 }
+  div.options h5 {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    animation: 0.5s linear shine;
+  }
 
 ul.quick-words {
 	display: flex;
@@ -53,64 +66,14 @@ div.options button:hover, div.options button:focus {
 /* GRAPHICAL VERSION */
 
 div.canvas.graph div.conditions {
-  display: flex;
-  align-items: center;
-  overflow-x: auto;
-  height: 80vh;
-}
-
-ul.nodes-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  width: 1350px;
-  height: 80vh;
-}
-
-.node {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style-type: none;
-  width: 150px;
-  text-align: center;
-  background: rgba(255,255,255,0.7)
+  overflow: scroll;
+  height: 80vh;
 }
-
-.node::before {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 35px;
-  height: 35px;
-  top: 31px;
-  left: calc(50% - 18px);
-  background-color: var(--and);
-  border-radius: 35px;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+div.canvas.graph div.flow {
+  position: relative;
+  height: 1300px;
 }
-
-div.node {
-  flex-basis: 150px;
-  margin-right: 0.5rem;
-}
-
-p.actions {
-  order: 1;
-  width: 66px;
-}
-
-p.tag {
-  order: 2;
-  display: block;
-  font-size: 0.75em;
-  margin-top: 44px;
-}
-
-p.tag strong {font-size: 95%;}
-
 div.canvas.graph .icon-plus, div.canvas.graph .icon-less {
   transform: scale(0.5);
 }
