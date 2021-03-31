@@ -1,6 +1,4 @@
 import { Component, OnInit, Input, Output, ViewChild, EventEmitter, ElementRef } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-modal',
@@ -9,29 +7,9 @@ import { filter } from 'rxjs/operators';
 })
 export class ModalComponent implements OnInit {
 
-  constructor(private el: ElementRef, private router: Router) { }
+  constructor(private el: ElementRef) { }
 
-  ngOnInit() {
-    let allFocusables = this.el.nativeElement.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
-    let theLast = allFocusables[allFocusables.length - 1];
-    let theFirst = allFocusables[0];
-
-    this.el.nativeElement.addEventListener('keydown', function(e) {
-      if(e.key === 'Tab' || e.keyCode === 9) {
-        if ( e.shiftKey ) /* shift + tab */ {
-          if (document.activeElement === theFirst) {
-            theLast.focus();
-            e.preventDefault();
-          }
-        } else /* tab */ {
-          if (document.activeElement === theLast) {
-            theFirst.focus();
-            e.preventDefault();
-          }
-        }
-      }
-    });
-  }
+  ngOnInit() {}
 
   @Input() isOpen: boolean = false;
   @Input() modalTitle: string;
@@ -43,13 +21,31 @@ export class ModalComponent implements OnInit {
   @ViewChild('container', {static: true}) container: ElementRef;
   @ViewChild('focusable', {static: true}) focusable: ElementRef;
 
-  dialogTitle = 'modalTitle' + this.randomID();
-  dialogDescription = 'modalDesc' + this.randomID();
+  theId = this.randomID();
+  dialogTitle = 'modalTitle' + this.theId;
+  dialogDescription = 'modalDesc' + this.theId;
 
-  onKey(event): void {
-    if (event.key === 'Escape') {
+  handleKeyEvents(e) {
+    if (e.key === 'Escape') {
       this.isOpen = false;
       this.onHide.emit(this.dialogElement);
+      return;
+    }
+    let allFocusables = this.el.nativeElement.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
+    let theLast = allFocusables[allFocusables.length - 1];
+    let theFirst = allFocusables[0];
+    if(e.key === 'Tab' || e.keyCode === 9) {
+      if ( e.shiftKey ) /* shift + tab */ {
+        if (document.activeElement === theFirst) {
+          theLast.focus();
+          e.preventDefault();
+        }
+      } else /* tab */ {
+        if (document.activeElement === theLast) {
+          theFirst.focus();
+          e.preventDefault();
+        }
+      }
     }
   }
 
@@ -72,28 +68,5 @@ export class ModalComponent implements OnInit {
       this.onHide.emit(this.dialogElement);
     }
   }
-
-  //Trap focus inside modal
-  focusTrap(e): void {
-    let allFocusables = this.el.nativeElement.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
-    let theLast = allFocusables[allFocusables.length - 1];
-    let theFirst = allFocusables[0];
-    let currKey = document.activeElement;
-
-    /*if(e.key === 'Tab' || e.keyCode === 9) {
-      if ( e.shiftKey ) {
-        if (currKey === theFirst) {
-          theLast.focus();
-          e.preventDefault();
-        }
-      } else {
-        if (currKey === theLast) {
-          theFirst.focus();
-          e.preventDefault();
-        }
-      }
-    }*/
-  }
-
 
 }

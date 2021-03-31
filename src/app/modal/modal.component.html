@@ -1,6 +1,12 @@
-<div class="modal" role="dialog" aria-modal="true" #dialogElement [attr.aria-hidden]="!isOpen">
+<div
+  class="modal"
+  role="dialog"
+  aria-modal="true"
+  #dialogElement
+  [attr.aria-hidden]="!isOpen"
+  (keydown)="handleKeyEvents($event)">
   <div class="overlay" (click)="ToggleOpen()"></div>
-  <div class="modal-body" (keyup)="onKey($event)">
+  <div class="modal-body">
     <h2 class="modal-title" [id]="dialogTitle" tabindex="0" #focusable>
       {{ modalTitle }}
     </h2>
