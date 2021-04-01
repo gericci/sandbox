@@ -8,6 +8,7 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { ComponentsPageComponent } from './components-page/components-page.component';
 import { ModalComponent } from './modal/modal.component';
 import { ModalButtonComponent } from './modal/modal-button/modal-button.component';
+import { FocusOnPageChangeDirective } from './focus-on-page-change.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ModalButtonComponent } from './modal/modal-button/modal-button.componen
     ComponentsPageComponent,
     ModalComponent,
     ModalButtonComponent,
+    FocusOnPageChangeDirective,
   ],
   imports: [
     BrowserModule,
