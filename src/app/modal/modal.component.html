@@ -7,7 +7,7 @@
   (keydown)="handleKeyEvents($event)">
   <div class="overlay" (click)="ToggleOpen()"></div>
   <div class="modal-body">
-    <h2 class="modal-title" [id]="dialogTitle" tabindex="0" #focusable>
+    <h2 [appAutofocus]="isOpen" class="modal-title" [id]="dialogTitle" tabindex="0">
       {{ modalTitle }}
     </h2>
     <p><button class="modal-close" (click)="ToggleOpen()">Close</button></p>
