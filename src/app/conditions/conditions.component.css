@@ -1,0 +1,80 @@
+@keyframes shine {
+  0% {background-color: rgba(255,255,255,0.3)}
+  50% {background-color: rgba(255, 153, 0, 1)}
+  100% {background-color: rgba(255,255,255,0.3)}
+}
+
+.flow {position: relative;}
+.shine {animation: 0.5s linear shine;}
+
+div.canvas {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+div.conditions {
+	box-sizing: border-box;
+	flex-basis: 75%;
+	height: 50vh;
+	padding: 1rem;
+	border: 1px solid var(--n-medium);
+}
+
+div.options {
+	flex-basis: 24%;
+	background-image: var(--gradient);
+}
+  div.options h5 {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    animation: 0.5s linear shine;
+  }
+
+ul.quick-words {
+	display: flex;
+	list-style-type: none;
+}
+
+
+	ul.quick-words li {margin-right: 0.5rem;}
+
+div.options h4 {
+  font-weight: bold;
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  padding: 0.5rem 1rem;
+}
+
+div.options div.content {
+  margin: 1rem;
+}
+
+div.options button {
+  color: var(--main-color);
+  background-color: var(--main-light);
+  padding: 0.3em 0.5em;
+  margin: 0 0.5rem 0.5rem 0;
+  border: 2px solid var(--main-color);
+}
+
+div.options button:hover, div.options button:focus {
+  background-color: var(--highlight);
+  border-color: var(--highlight);
+}
+
+
+/* GRAPHICAL VERSION */
+
+div.canvas.graph div.conditions {
+  position: relative;
+  overflow: scroll;
+  height: 80vh;
+}
+div.canvas.graph div.flow {
+  position: relative;
+  height: 1300px;
+}
+div.canvas.graph .icon-plus, div.canvas.graph .icon-less {
+  transform: scale(0.5);
+}
