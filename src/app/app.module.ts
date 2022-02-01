@@ -10,6 +10,10 @@ import { ModalComponent } from './modal/modal.component';
 import { ModalButtonComponent } from './modal/modal-button/modal-button.component';
 import { FocusOnPageChangeDirective } from './focus-on-page-change.directive';
 import { AutofocusDirective } from './autofocus.directive';
+import { DataGridComponent } from './data-grid/data-grid.component';
+import { LongPage1Component } from './long-page1/long-page1.component';
+import { LongPage2Component } from './long-page2/long-page2.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { AutofocusDirective } from './autofocus.directive';
     ModalButtonComponent,
     FocusOnPageChangeDirective,
     AutofocusDirective,
+    DataGridComponent,
+    LongPage1Component,
+    LongPage2Component,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,71 @@
+<table>
+  <caption>List of</caption>
+  <tr>
+    <th scope="col">
+      <span role="button" tabindex="0" aria-sorted="descending">
+        Status
+      </span>
+    </th>
+    <th scope="col">
+      <span role="button" tabindex="-1" aria-sorted="none">
+        Contrat n&deg;
+      </span>
+    </th>
+    <th scope="col">
+      <span role="button" tabindex="-1" aria-sorted="none">
+        Type
+      </span>
+    </th>
+    <th scope="col">
+      <span role="button" tabindex="-1" aria-sorted="none">
+        Signé le
+      </span>
+    </th>
+    <th scope="col">
+      <span role="button" tabindex="-1" aria-sorted="none">
+        Activé le
+      </span>
+    </th>
+    <th scope="col">
+      <span role="button" tabindex="-1" aria-sorted="none">
+        Validité
+      </span>
+    </th>
+    <th scope="col">
+      <span role="button" tabindex="-1" aria-sorted="none">
+        Porteur
+      </span>
+    </th>
+    <th scope="col">
+      <span role="button" tabindex="-1" aria-sorted="none">
+        Payeur
+      </span>
+    </th>
+  </tr>
+  <tr *ngFor="let row of dataArray">
+    <td tabindex="-1">
+      {{ row.status }}
+    </td>
+    <td tabindex="-1">
+      {{ row.contractNum }}
+    </td>
+    <td tabindex="-1">
+      {{ row.type }}
+    </td>
+    <td tabindex="-1">
+      {{ row.signDate }}
+    </td>
+    <td tabindex="-1">
+      {{ row.activeDate }}
+    </td>
+    <td tabindex="-1">
+      {{ row.validDate }}
+    </td>
+    <td tabindex="-1">
+      {{ row.carrier }}
+    </td>
+    <td tabindex="-1">
+      {{ row.payer }}
+    </td>
+  </tr>
+</table>

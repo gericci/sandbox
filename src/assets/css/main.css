@@ -53,29 +53,82 @@ header, footer, main, nav, aside, article, section, figure, figcaption {
     font-style: normal;
 }
 
-html {height: 100%; overflow: hidden;}
-
 body {
 	height: 100%;
 	font: 100%/1.45 var(--stack);
 	color: var(--body-text);
 	background-color: var(--body-bg);
-  scrollbar-width: thin;
-  scrollbar-color: var(--n-light) var(--n-u-light);
 }
 
-body::-webkit-scrollbar {
-  width: 11px;
+h1 {
+	font-size: calc(1em + 1vw);
+	text-transform: uppercase;
+	line-height: 1.1;
+	letter-spacing: 0.2em;
+	color: var(--n-medium);
+	background-color: var(--n-u-dark);
 }
-body::-webkit-scrollbar-track {
-  background: var(--n-light);
+
+h2 {
+	font-size: calc(1em + 1vw);
+	color: var(--n-medium);
+	background-color: var(--body-bg);
+	margin-bottom: 0.8em;
 }
-body::-webkit-scrollbar-thumb {
-  background-color: var(--n-u-light);
-  border-radius: 6px;
-  border: 0;
+
+p, li, dt, dd {
+	color: var(--body-text);
+	background-color: var(--body-bg);
+	font-size: calc(0.85em + 0.9vw);
 }
+
+a {
+	text-decoration: none;
+	color: var(--text-inv);
+	background-color: var(--focus-color);
+}
+a:hover, a:visited {
+	text-decoration: underline;
+	color: var(--focus-color);
+	background-color: var(--body-bg);
+}
+a:focus {
+	text-decoration: underline;
+	color: var(--focus-color);
+	background-color: var(--body-bg);
+}
+
+button {
+	font: bold 100%/1 var(--stack);
+	color: var(--text-inv);
+	background-color: var(--highlight);
+	padding: 0.5em 1em;
+	border: 2px solid var(--highlight);
+	border-radius: var(--radius);
+	cursor: pointer;
+}
+
+button:hover {
+	color: var(--body-text);
+	background-color: var(--body-bg);
+	border-color: var(--focus-color);
+}
+
+:focus {
+	outline: 2px dotted var(--focus-color);
+}
+
+blockquote {max-width: 25em; margin: 6vw;}
+	blockquote p:first-child {
+		font: bold 180%/1.4 var(--stack);
+	}
+	blockquote p:last-child {
+		font-size: 95%;
+		text-transform: uppercase;
+	}
 
 #container {
-	margin: 2rem;
+	width: 90%;
+	max-width: 1200px;
+	margin: 2vw auto;
 }

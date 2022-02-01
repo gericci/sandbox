@@ -1,0 +1,21 @@
+footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2vw auto 8vw;
+  padding-top: 1rem;
+  margin-top: 6vw;
+  border-top: 1px solid var(--n-medium);
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0.5rem 0 1rem;
+}
+
+li + li::before {
+  display: inline-block;
+  content: "¤";
+  padding-right: 1rem;
+}

@@ -1,1 +1,30 @@
+header {
+  background-color: var(--n-u-dark);
+  padding: 3vw 0 2vw;
+	margin: 0 auto 8vw;
+}
 
+h1 {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 1em;
+}
+
+nav {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  list-style-type: none;
+  padding: 0.5rem 0 1rem;
+}
+
+a {
+  white-space: nowrap;
+  padding: 0.5em;
+}
