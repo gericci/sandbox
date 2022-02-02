@@ -1,10 +1,14 @@
 <header>
-  <h1>Angular Accessibility Sandbox</h1>
-  <nav>
+  <h1 appFocusOnPageChange>Angular Accessibility Sandbox</h1>
+  <nav aria-label="Main navigation">
+    <p class="skip">
+      <a [attr.href]="this.router.url + '#container'">Go to main content</a>
+    </p>
+
     <ul>
       <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
-      <li><a routerLink="/long-page-1" routerLinkActive="active">Long Page 1</a></li>
-      <li><a routerLink="/long-page-2" routerLinkActive="active">Long Page 2</a></li>
+      <li><a routerLink="/long-page-1" routerLinkActive="active">Long Page 1 (focus)</a></li>
+      <li><a routerLink="/long-page-2" routerLinkActive="active">Long Page 2 (role)</a></li>
       <!--li><a routerLink="/components" routerLinkActive="active">All Components</a></li-->
     </ul>
   </nav>

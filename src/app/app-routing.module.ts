@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'components', component: ComponentsPageComponent, data: {title: 'All Components'}},
   { path: 'long-page-1', component: LongPage1Component, data: {title: 'Long Page 1'}},
   { path: 'long-page-2', component: LongPage2Component, data: {title: 'Long Page 2'}},
+  { path: '**', component: DashboardPageComponent, data: {title: 'Dashboard'}},
 ];
 
 @NgModule({

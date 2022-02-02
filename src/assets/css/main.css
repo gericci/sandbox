@@ -31,33 +31,12 @@ header, footer, main, nav, aside, article, section, figure, figcaption {
 
 
 /* ------------------------------ DEFAULTS ---------------------------- */
-@font-face {
-    font-family: 'bai_jamjureebold';
-    src: url('baijamjuree-bold-webfont.woff2') format('woff2'),
-         url('baijamjuree-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'bai_jamjureesemibold';
-    src: url('baijamjuree-semibold-webfont.woff2') format('woff2'),
-         url('baijamjuree-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'bai_jamjureeregular';
-    src: url('baijamjuree-regular-webfont.woff2') format('woff2'),
-         url('baijamjuree-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
 	height: 100%;
 	font: 100%/1.45 var(--stack);
 	color: var(--body-text);
 	background-color: var(--body-bg);
+	scroll-behavior: smooth;
 }
 
 h1 {
@@ -74,6 +53,11 @@ h2 {
 	color: var(--n-medium);
 	background-color: var(--body-bg);
 	margin-bottom: 0.8em;
+}
+
+h3 {
+	font-size: calc(1em + 0.7vw);
+	margin: 1em 0 0.8em;
 }
 
 p, li, dt, dd {
@@ -118,7 +102,7 @@ button:hover {
 	outline: 2px dotted var(--focus-color);
 }
 
-blockquote {max-width: 25em; margin: 6vw;}
+blockquote {max-width: 35em; margin: 6vw;}
 	blockquote p:first-child {
 		font: bold 180%/1.4 var(--stack);
 	}
@@ -132,3 +116,21 @@ blockquote {max-width: 25em; margin: 6vw;}
 	max-width: 1200px;
 	margin: 2vw auto;
 }
+
+/* --- SKIP LINKS --- */
+
+.skip {
+	font-size: 0.95em;
+	text-align: center;
+}
+
+	.skip a {
+		display: block;
+		position: absolute;
+		overflow: hidden;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+	}
+	.skip a:focus {position: static; width: auto; height: auto;}
