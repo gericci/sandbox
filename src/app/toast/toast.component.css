@@ -1,0 +1,51 @@
+@keyframes slideToTop {
+    0% {bottom: -50em; opacity: 0;}
+   80% {bottom: 2rem; transition: bottom 0.5s cubic-bezier(0.43, 1.18, 0.99, 0.98); opacity: 0.5;}
+  100% {bottom: 2rem; transition: bottom 0.5s cubic-bezier(0.43, 1.18, 0.99, 0.98); opacity: 1;}
+}
+@keyframes slideToBottom {
+    0% {top: -50em; opacity: 0;}
+   80% {top: 2rem; transition: top 0.5s cubic-bezier(0.43, 1.18, 0.99, 0.98); opacity: 0.5;}
+  100% {top: 2rem; transition: top 0.5s cubic-bezier(0.43, 1.18, 0.99, 0.98); opacity: 1;}
+}
+
+.slide-to-top {
+  bottom: -50em;
+}
+.slide-to-top.active {
+  animation: slideToTop 1s forwards;
+}
+.slide-to-bottom {
+  top: -50em;
+}
+.slide-to-bottom.active {
+  animation: slideToBottom 1s forwards;
+}
+
+p {
+  position: fixed;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25em;
+  right: 5%;
+  font: 1.2em var(--stack);
+  color: var(--text-inv);
+  background-color: var(--highlight);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  z-index: 5000;
+}
+
+p .content {display: none;}
+p.active .content {display: block;}
+
+
+/* If alert message */
+
+p[role=alert] {
+  color: var(--text-inv);
+  background-color: var(--alert-color);
+}

@@ -21,10 +21,11 @@ ul {
   gap: 1rem;
   overflow-x: auto;
   list-style-type: none;
-  padding: 0.5rem 0 1rem;
+  padding: 0.5rem 0 1rem 2px;
 }
 
 a {
+  display: block;
   white-space: nowrap;
   padding: 0.5em;
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ToastComponent } from '../toast/toast.component';
 
 @Component({
   selector: 'app-long-page2',
@@ -32,13 +33,32 @@ export class LongPage2Component implements OnInit {
   updateQuote () {
     let gmQuote = document.getElementById('gm-quote');
     this.quote = this.quotes[this.randomNum()];
-    //gmQuote.setAttribute('tabindex', '-1');
-    //gmQuote.focus();
+    //this.openToast();
   }
 
   randomNum() {
     const idRandom = Math.round(Math.random() * (12 - 1) + 1);
     return idRandom;
+  }
+
+  // Toast demo
+  @ViewChild('toast', {static: true}) toast: ToastComponent;
+
+  public openToast() {
+    this.toast.toggle();
+  }
+
+  public doNothing(e) {
+    e.preventDefault();
+
+    if(document.getElementById('u-id')) {
+      let inp = document.getElementById('u-id');
+      inp.classList.add('error');
+      inp.parentNode.insertAdjacentHTML('beforeend', '<span class=\"error\" id=\"error1\">User ID is mandatory</span>');
+
+      //inp.setAttribute('aria-describedby', "error1")
+      //inp.focus();
+    }
   }
 
 }

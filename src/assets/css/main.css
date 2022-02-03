@@ -134,3 +134,63 @@ blockquote {max-width: 35em; margin: 6vw;}
 		height: 1px;
 	}
 	.skip a:focus {position: static; width: auto; height: auto;}
+
+/* ----- FORMS ----- */
+
+form {
+	margin: 4vw;
+}
+
+form p + p {margin-top: 1em;}
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+input, select {
+	font: 100%/1 var(--stack);
+	color: var(--body-text);
+	background-color: rgba(255,255,255,0.15);
+	padding: 0.5em 0.65em;
+	border: none;
+	border-radius: 0.3em;
+}
+input:focus, select:focus {
+	outline: none;
+	border: 2px solid var(--focus-color);
+}
+
+p + p.buttons-bar {
+	margin: 4vw 0;
+}
+
+input[type=submit], input[type=reset] {
+	border: 2px solid var(--main-color);
+	border-radius: var(--radius);
+	margin-right: 2rem;
+	cursor: pointer;
+}
+
+input[type=submit] {
+	color: var(--text-inv);
+	background-color: var(--main-color);
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+	background-color: var(--focus-color);
+}
+input[type=reset]:hover {
+	color: var(--text-inv);
+}
+
+input[type=submit]:focus, input[type=reset]:focus {
+	outline: 2px dotted var(--focus-color);
+}
+
+input.error {border: 2px solid var(--alert-color);}
+
+span.error {
+	display: block;
+	color: var(--alert-color);
+}

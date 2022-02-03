@@ -1,0 +1,10 @@
+<p
+  [attr.role]="role"
+  [ngClass]="{ active: active, inactive: !active }"
+  class="{{ styleClass }}">
+
+  <!-- Your Content -->
+  <span class="content">
+    <ng-content></ng-content>
+  </span>
+</p>

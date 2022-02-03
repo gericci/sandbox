@@ -9,7 +9,7 @@
 </p>
 
 <blockquote id="gm-quote">
-  <p [innerHTML]="quote" role="status" lang="en"></p>
+  <p [innerHTML]="quote"></p>
   <p>&mdash; Grouxo Marx</p>
 </blockquote>
 
@@ -38,6 +38,36 @@
   culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<form method="post" action="">
+	<p><label for="u-id">User ID *</label>
+		<input type="text" id="u-id" name="u-id" /></p>
+
+	<p><label for="f-name">First name</label>
+		<input type="text" id="f-name" name="f-name" /></p>
+
+	<p><label for="l-name">Last name</label>
+		<input type="text" id="l-name" name="l-name" /></p>
+
+	<p><label for="l-email">E-mail</label>
+		<input type="text" id="l-email" name="l-email" /></p>
+
+	<p class="stressed"><label for="u-pwd">Password</label>
+		<input type="password" id="u-pwd" name="u-pwd" /></p>
+
+	<p class="complement"><label for="u-type">Type</label>
+		<select id="u-type" name="u-type">
+			<option value="type1">Technical operator</option>
+			<option value="type2">Economic operator</option>
+			<option value="type3">Facility administrator</option>
+			<option value="type4">Machine administrator</option>
+		</select></p>
+
+	<p class="buttons-bar">
+    <input type="submit" value="Create" (click)="doNothing($event)" />
+    <input type="reset" value="Cancel" />
+  </p>
+</form>
+
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -56,7 +86,11 @@
 </p>
 
 <p>
-  <button (click)="updateQuote()">
+  <button type="button" (click)="updateQuote()">
     Update quote
   </button>
 </p>
+
+<!--app-toast id="toast" #toast>
+  The quote has been updated
+</app-toast-->

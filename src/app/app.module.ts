@@ -14,6 +14,7 @@ import { DataGridComponent } from './data-grid/data-grid.component';
 import { LongPage1Component } from './long-page1/long-page1.component';
 import { LongPage2Component } from './long-page2/long-page2.component';
 import { FooterComponent } from './footer/footer.component';
+import { ToastComponent } from './toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FooterComponent } from './footer/footer.component';
     LongPage1Component,
     LongPage2Component,
     FooterComponent,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,
