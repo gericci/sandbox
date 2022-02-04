@@ -1,0 +1,9 @@
+div.group {
+  padding: 2rem;
+  margin: 4vw 0;
+  border: 1px solid var(--body-text)
+}
+
+div.group > :first-child {
+  margin-top: 0;
+}

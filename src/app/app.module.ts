@@ -15,6 +15,8 @@ import { LongPage1Component } from './long-page1/long-page1.component';
 import { LongPage2Component } from './long-page2/long-page2.component';
 import { FooterComponent } from './footer/footer.component';
 import { ToastComponent } from './toast/toast.component';
+import { HComponent } from './h/h.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { ToastComponent } from './toast/toast.component';
     LongPage2Component,
     FooterComponent,
     ToastComponent,
+    HComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

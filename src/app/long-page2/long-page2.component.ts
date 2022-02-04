@@ -54,10 +54,7 @@ export class LongPage2Component implements OnInit {
     if(document.getElementById('u-id')) {
       let inp = document.getElementById('u-id');
       inp.classList.add('error');
-      inp.parentNode.insertAdjacentHTML('beforeend', '<span class=\"error\" id=\"error1\">User ID is mandatory</span>');
-
-      //inp.setAttribute('aria-describedby', "error1")
-      //inp.focus();
+      (<HTMLElement>inp.parentNode).insertAdjacentHTML('beforeend', '<span class=\"error\">User ID is mandatory</span>');
     }
   }
 

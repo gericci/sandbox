@@ -49,7 +49,7 @@ h1 {
 }
 
 h2 {
-	font-size: calc(1em + 1vw);
+	font-size: calc(1.6em + 1vw);
 	color: var(--n-medium);
 	background-color: var(--body-bg);
 	margin-bottom: 0.8em;
@@ -61,6 +61,7 @@ h3 {
 }
 
 p, li, dt, dd {
+	font-weight: 300;
 	color: var(--body-text);
 	background-color: var(--body-bg);
 	font-size: calc(0.85em + 0.9vw);
@@ -81,6 +82,8 @@ a:focus {
 	color: var(--focus-color);
 	background-color: var(--body-bg);
 }
+
+img {max-width: 100%;}
 
 button {
 	font: bold 100%/1 var(--stack);
@@ -193,4 +196,12 @@ input.error {border: 2px solid var(--alert-color);}
 span.error {
 	display: block;
 	color: var(--alert-color);
+}
+
+/* ------------- COMPONENTS EXCEPTIONS --------------- */
+
+div.card p {
+	font-weight: 500;
+	color: var(--text-inv);
+	background-color: rgba(255,255,255,0);
 }
