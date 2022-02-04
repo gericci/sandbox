@@ -20,7 +20,6 @@ p.illustration {
 .head {
   order: 2;
   font-size: calc(1em + 1vw);
-  font-weight: 900;
 }
 
 div.group {order: 3;}
@@ -33,7 +32,7 @@ div.group {order: 3;}
     gap: 0 2rem;
   }
 
-  .head {margin-top: 0;}
+  .head {margin-top: 0.5rem;}
 
   p.illustration {
     grid-row-start: 1;

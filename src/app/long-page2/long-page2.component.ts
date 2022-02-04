@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ToastComponent } from '../toast/toast.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-long-page2',
@@ -8,7 +9,9 @@ import { ToastComponent } from '../toast/toast.component';
 })
 export class LongPage2Component implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) {
+      titleService.setTitle("Long Page 2: Angular Accessibility Sandbox");
+  }
 
   ngOnInit() { }
 

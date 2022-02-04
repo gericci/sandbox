@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-long-page1',
@@ -7,7 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LongPage1Component implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) {
+      titleService.setTitle("Long Page 1: Angular Accessibility Sandbox");
+  }
 
   ngOnInit() {}
 
