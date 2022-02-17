@@ -1,5 +1,5 @@
 # Sandbox
-Tests for Angular #A11Y.
+This is a sample web site to demo some accessibility points to consider when creating an application with the Angular framework.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
 

@@ -1,0 +1,30 @@
+@keyframes roundnround {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+:host {align-self: center;}
+
+button {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+svg {
+  display: none;
+  margin-right: 0.5em;
+  transform-origin: center;
+}
+
+.animate {
+  display: block;
+  animation: roundnround 1.2s linear infinite
+}
+
+@media screen and (min-width: 600px) {
+  button {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}

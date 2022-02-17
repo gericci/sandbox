@@ -1,0 +1,7 @@
+<button type="button" (click)="sendCode()">
+  <span>
+    <svg role="img" width="20" height="20" aria-hidden="true"><use href="#pic-reload"></use></svg>
+  </span>
+  <span *ngIf="!firstTime">Send {{ btLabel }}</span>
+  <span *ngIf="firstTime">Resend {{ btLabel }}</span>
+</button>

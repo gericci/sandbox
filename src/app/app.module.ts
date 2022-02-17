@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ToastComponent } from './toast/toast.component';
 import { HComponent } from './h/h.component';
 import { CardComponent } from './card/card.component';
+import { SendCodeButtonComponent } from './send-code-button/send-code-button.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CardComponent } from './card/card.component';
     ToastComponent,
     HComponent,
     CardComponent,
+    SendCodeButtonComponent,
   ],
   imports: [
     BrowserModule,
