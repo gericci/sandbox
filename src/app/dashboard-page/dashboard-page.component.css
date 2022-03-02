@@ -7,3 +7,8 @@ div.group {
 div.group > :first-child {
   margin-top: 0;
 }
+
+.sender {
+  text-align: right;
+  margin-top: 1rem;
+}

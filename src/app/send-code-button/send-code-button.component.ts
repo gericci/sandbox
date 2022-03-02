@@ -24,7 +24,7 @@ export class SendCodeButtonComponent implements OnInit {
       this.firstTime = true;
 
       // If dash in id it won't work!!!
-      if (this.inputId != "") {
+      /*if (this.inputId != "") {
         const theInput = (document.getElementById(this.inputId)) as HTMLInputElement;
         if (theInput) {
           theInput.classList.add('active');
@@ -32,7 +32,7 @@ export class SendCodeButtonComponent implements OnInit {
             theInput.focus();
           }, 1000);
         }
-      }
+      }*/
     }, 3000);
   }
 
