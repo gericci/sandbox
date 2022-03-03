@@ -35,8 +35,6 @@ export class LongPage1Component implements OnInit {
   updateQuote () {
     let gmQuote = document.getElementById('gm-quote');
     this.quote = this.quotes[this.randomNum()];
-    gmQuote.setAttribute('tabindex', '-1');
-    gmQuote.focus();
   }
 
   randomNum() {
