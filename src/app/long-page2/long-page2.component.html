@@ -40,19 +40,27 @@
 
 <form method="post" action="">
 	<p><label for="u-id">User ID *</label>
-		<input type="text" id="u-id" name="u-id" /></p>
+		<input type="text" id="u-id" name="u-id" required="required" />
+    <span class="error-message" [ngClass]="{'active': onError}" id="{{ errorId }}">
+      User ID is mandatory
+    </span>
+  </p>
 
 	<p><label for="f-name">First name</label>
-		<input type="text" id="f-name" name="f-name" /></p>
+		<input type="text" id="f-name" name="f-name" />
+  </p>
 
 	<p><label for="l-name">Last name</label>
-		<input type="text" id="l-name" name="l-name" /></p>
+		<input type="text" id="l-name" name="l-name" />
+  </p>
 
 	<p><label for="l-email">E-mail</label>
-		<input type="text" id="l-email" name="l-email" /></p>
+		<input type="text" id="l-email" name="l-email" />
+  </p>
 
 	<p class="stressed"><label for="u-pwd">Password</label>
-		<input type="password" id="u-pwd" name="u-pwd" /></p>
+		<input type="password" id="u-pwd" name="u-pwd" />
+  </p>
 
 	<p class="complement"><label for="u-type">Type</label>
 		<select id="u-type" name="u-type">

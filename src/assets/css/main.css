@@ -193,7 +193,7 @@ input[type=submit]:focus, input[type=reset]:focus {
 
 input.error {border: 2px solid var(--alert-color);}
 
-span.error {
+span.error-message {
 	display: block;
 	color: var(--alert-color);
 }

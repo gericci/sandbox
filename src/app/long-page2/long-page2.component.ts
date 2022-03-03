@@ -9,12 +9,6 @@ import { Title } from '@angular/platform-browser';
 })
 export class LongPage2Component implements OnInit {
 
-  constructor(private titleService: Title) {
-      titleService.setTitle("Long Page 2: Angular Accessibility Sandbox");
-  }
-
-  ngOnInit() { }
-
   public quotes = [
     "",
     "If you're not having fun, you're doing something wrong.",
@@ -32,6 +26,19 @@ export class LongPage2Component implements OnInit {
   ]
 
   public quote: string = this.quotes[this.randomNum()];
+
+  public randomIdValue: number;
+  public errorId: string;
+  public onError: boolean = false;
+
+  constructor(private titleService: Title) {
+      titleService.setTitle("Long Page 2: Angular Accessibility Sandbox");
+      this.randomIdValue = this.randomNum();
+  }
+
+  ngOnInit() {
+    this.errorId = 'error' + this.randomIdValue;
+  }
 
   updateQuote () {
     let gmQuote = document.getElementById('gm-quote');
@@ -58,9 +65,9 @@ export class LongPage2Component implements OnInit {
 
     if(inp && (<HTMLInputElement>inp).value == "") {
       inp.classList.add('error');
-      if(inp.parentNode.querySelectorAll('span').length == 0) {
-        (<HTMLElement>inp.parentNode).insertAdjacentHTML('beforeend', '<span class=\"error\" id=\"error01\">User ID is mandatory</span>');
-      }
+      this.onError = true;
+    } else {
+      this.onError = false;
     }
   }
 

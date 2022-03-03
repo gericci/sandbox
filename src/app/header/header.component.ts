@@ -12,9 +12,6 @@ export class HeaderComponent implements OnInit {
 
   currentPage: boolean;
 
-  ngOnInit(): void {
-    console.log(this.router.isActive(this.router.url, true))
-  }
-
+  ngOnInit(): void {}
 
 }
