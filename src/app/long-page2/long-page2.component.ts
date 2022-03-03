@@ -54,11 +54,12 @@ export class LongPage2Component implements OnInit {
   public doNothing(e) {
     e.preventDefault();
 
-    if(document.getElementById('u-id')) {
-      let inp = document.getElementById('u-id');console.log(inp.parentNode.querySelectorAll('span').length)
+    let inp = document.getElementById('u-id');
+
+    if(inp && (<HTMLInputElement>inp).value == "") {
+      inp.classList.add('error');
       if(inp.parentNode.querySelectorAll('span').length == 0) {
-        inp.classList.add('error');
-        (<HTMLElement>inp.parentNode).insertAdjacentHTML('beforeend', '<span class=\"error\">User ID is mandatory</span>');
+        (<HTMLElement>inp.parentNode).insertAdjacentHTML('beforeend', '<span class=\"error\" id=\"error01\">User ID is mandatory</span>');
       }
     }
   }
