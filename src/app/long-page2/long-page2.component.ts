@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { ToastComponent } from '../toast/toast.component';
 import { Title } from '@angular/platform-browser';
 
@@ -55,9 +55,11 @@ export class LongPage2Component implements OnInit {
     e.preventDefault();
 
     if(document.getElementById('u-id')) {
-      let inp = document.getElementById('u-id');
-      inp.classList.add('error');
-      (<HTMLElement>inp.parentNode).insertAdjacentHTML('beforeend', '<span class=\"error\">User ID is mandatory</span>');
+      let inp = document.getElementById('u-id');console.log(inp.parentNode.querySelectorAll('span').length)
+      if(inp.parentNode.querySelectorAll('span').length == 0) {
+        inp.classList.add('error');
+        (<HTMLElement>inp.parentNode).insertAdjacentHTML('beforeend', '<span class=\"error\">User ID is mandatory</span>');
+      }
     }
   }
 
