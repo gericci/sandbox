@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ModalCdkComponent } from './modal-cdk.component';
 
@@ -6,7 +6,7 @@ describe('ModalCdkComponent', () => {
   let component: ModalCdkComponent;
   let fixture: ComponentFixture<ModalCdkComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ModalCdkComponent ]
     })
