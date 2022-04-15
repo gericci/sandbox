@@ -18,6 +18,11 @@ import { ToastComponent } from './toast/toast.component';
 import { HComponent } from './h/h.component';
 import { CardComponent } from './card/card.component';
 import { SendCodeButtonComponent } from './send-code-button/send-code-button.component';
+import { ModalCdkComponent } from './components/modal-cdk/modal-cdk.component';
+import { ModalButtonCdkComponent } from './components/modal-button-cdk/modal-button-cdk.component';
+
+//import { A11yModule } from "@angular/cdk/a11y";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -37,10 +42,14 @@ import { SendCodeButtonComponent } from './send-code-button/send-code-button.com
     HComponent,
     CardComponent,
     SendCodeButtonComponent,
+    ModalCdkComponent,
+    ModalButtonCdkComponent,
+    //A11yModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
