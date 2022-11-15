@@ -2,10 +2,11 @@
 This is a sample web site to demo some accessibility points to consider when creating an application with the Angular framework.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+Last angular version update for this project is 13.3.3.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:8000/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

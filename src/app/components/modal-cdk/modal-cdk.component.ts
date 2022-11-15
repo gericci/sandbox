@@ -24,6 +24,7 @@ export class ModalCdkComponent implements OnInit {
 
   ngOnInit() {}
 
+  /*
   handleKeyEvents(e) {
     if (e.key === 'Escape') {
       this.isOpen = false;
@@ -34,12 +35,12 @@ export class ModalCdkComponent implements OnInit {
     const theLast = allFocusables[allFocusables.length - 1];
     const theFirst = allFocusables[0];
     if (e.key === 'Tab' || e.keyCode === 9) {
-      if ( e.shiftKey ) /* shift + tab */ {
+      if ( e.shiftKey )  {
         if (document.activeElement === theFirst) {
           theLast.focus();
           e.preventDefault();
         }
-      } else /* tab */ {
+      } else {
         if (document.activeElement === theLast) {
           theFirst.focus();
           e.preventDefault();
@@ -47,6 +48,7 @@ export class ModalCdkComponent implements OnInit {
       }
     }
   }
+  */
 
   randomID(): number {
     const idRandom = Math.round(Math.random() * (20000 - 1) + 1);
@@ -56,10 +58,10 @@ export class ModalCdkComponent implements OnInit {
   ToggleOpen(): void {
     if (!this.isOpen) {
       this.isOpen = true;
-      this.onShow.emit(this.dialogElement);
+      //this.onShow.emit(this.dialogElement);
     } else if (this.isOpen) {
       this.isOpen = false;
-      this.onHide.emit(this.dialogElement);
+      //this.onHide.emit(this.dialogElement);
     }
   }
 }
