@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { ModalButtonComponent } from './modal-button.component';
+import { ModalButtonCdkComponent } from './modal-button-cdk.component';
 
-describe('ModalButtonComponent', () => {
-  let component: ModalButtonComponent;
-  let fixture: ComponentFixture<ModalButtonComponent>;
+describe('ModalButtonCdkComponent', () => {
+  let component: ModalButtonCdkComponent;
+  let fixture: ComponentFixture<ModalButtonCdkComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalButtonComponent ]
+      declarations: [ ModalButtonCdkComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalButtonComponent);
+    fixture = TestBed.createComponent(ModalButtonCdkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

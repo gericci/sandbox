@@ -1,0 +1,43 @@
+div.modal {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  div.modal[aria-hidden=false] {display: block;}
+  div.modal div.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+  }
+  div.modal-body {
+    box-sizing: border-box;
+    position: absolute;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    padding: 2rem;
+    z-index: 1001;
+  }
+
+
+  *:focus, div.modal:focus {outline: 3px dotted #C00}
+
+
+    @media screen and (min-width: 600px) {
+      div.modal-body {width: 90%; left: 5%; height: 80vh; top: 10vh;}
+      button.modal-close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+      }
+    }

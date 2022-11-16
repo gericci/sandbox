@@ -8,7 +8,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) {}
+
+
+  constructor(private router: Router) {
+  }
+
+  mainContentUrl = this.router.url + '#container';
 
   currentPage: boolean;
 

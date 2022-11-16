@@ -1,8 +1,16 @@
 <h2>Components Page</h2>
-
+<!--
 <p><app-modal-button [modal]="modalInstance">Open Modal</app-modal-button></p>
 
 <app-modal #modalInstance modalTitle="Example Modal">
   <p>Yay! this is a modal</p>
   <p><button class="prout">YES</button> <button class="argh">NO</button></p>
 </app-modal>
+-->
+
+<p><app-modal-button-cdk [modal]="modalInstance">Open Modal Cdk</app-modal-button-cdk></p>
+
+<app-modal-cdk #modalInstance modalTitle="Example Modal">
+  <p>Yay! this is a modal</p>
+  <p><button class="prout">YES</button> <button class="argh">NO</button></p>
+</app-modal-cdk>
